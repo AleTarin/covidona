@@ -4,7 +4,7 @@ This project is developed by Front-End-Pistols.
 
 ## Description
 
-COVIDONA is a website with the purpose of displaying donation flyers from all over Mexico for anyone whilling to support to the cause of COVID-19 pandemic.
+COVIDONA is a website with the purpose to display donation flyers from all over Mexico for anyone whilling to support to the cause of COVID-19 pandemic.
 
 # React README
 
