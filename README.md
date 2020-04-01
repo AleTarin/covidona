@@ -1,3 +1,13 @@
+# COVIDONA
+
+This project is developed by Front-End-Pistols.
+
+## Description
+
+COVIDONA is a website with the purpose of displaying donation flyers from all over Mexico for anyone whilling to support to the cause of COVID-19 pandemic.
+
+# React README
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
