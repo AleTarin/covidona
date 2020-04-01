@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "covidona": "covidona-mx",
+    "default": "covidona-mx"
+  }
+}
