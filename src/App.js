@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import {Alert} from 'react-bootstrap'
+import { Alert } from 'react-bootstrap'
+import Gallery from './components/Gallery'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -15,6 +16,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <Gallery></Gallery>
         <Alert variant='dark'>
           Powered by Roro
         </Alert>
