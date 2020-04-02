@@ -8,6 +8,9 @@
 
 # production
 /build
+/.firebase
+
+package-lock.json
 
 # misc
 .DS_Store
