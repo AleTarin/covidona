@@ -3,19 +3,23 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  object-fit: cover;
+  object-position: 100% 0;
+  width: 1000px;
+  height: 450px;
 }
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 50px;
   padding: 20px;
-  color: white;
+  margin-bottom: 40px;
 }
 
 .App-intro {
   font-size: large;
+  color: rgb(189, 86, 210);
+  min-height: 720px;
 }
 
 @keyframes App-logo-spin {
