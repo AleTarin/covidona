@@ -12,6 +12,7 @@
 .App-intro {
   font-size: large;
   color: rgb(189, 86, 210);
+  margin-bottom: 70px;
 }
 
 @media screen and (max-width: 600px) {

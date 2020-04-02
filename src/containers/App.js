@@ -12,11 +12,11 @@ function App() {
       <img src={covidona} class="img-fluid" alt="logo" />
       <p className="App-intro">
         <h2>...</h2>
+        <Gallery />
       </p>
       <Navbar bg="light" fixed="bottom">
         <Navbar.Brand href="#home">Developed by Front-End-Pistols. Powered by Roro</Navbar.Brand>
       </Navbar>
-      <Gallery />
     </div>
   );
 }
