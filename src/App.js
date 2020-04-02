@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import covidona from '../public/media/images/covidona.png';
 import {Navbar} from 'react-bootstrap'
+import Gallery from './components/Gallery'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -16,6 +17,7 @@ class App extends Component {
         <Navbar bg="light" fixed="bottom">
           <Navbar.Brand href="#home">Powered by Roro</Navbar.Brand>
         </Navbar>
+        <Gallery></Gallery>
       </div>
     );
   }
