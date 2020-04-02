@@ -9,6 +9,7 @@
 # production
 /build
 /.firebase
+*.css
 
 package-lock.json
 

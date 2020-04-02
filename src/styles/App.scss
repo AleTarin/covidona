@@ -1,0 +1,17 @@
+.App {
+  text-align: center; }
+
+.App-header {
+  background-color: #222;
+  height: 50px;
+  padding: 20px;
+  margin-bottom: 40px; }
+
+.App-intro {
+  font-size: large;
+  color: #bd56d2;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-brand {
+    font-size: .95rem !important; } }
