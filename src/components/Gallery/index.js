@@ -1,9 +1,10 @@
 import React, { useState, useCallback } from "react";
-import Carousel, { Modal, ModalGateway } from "react-images";
-import { photos } from "./photos";
+import ImageGrid from "./ImageGrid"
+import ImageModal from "./ImageModal"
 import { Container } from "react-bootstrap";
 import './style.css'
 
+// TODO Send to DB and call from containers
 const images = [
     "https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg",
     "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg",
@@ -22,7 +23,7 @@ function GalleryGrid() {
     const [currentImage, setCurrentImage] = useState(0);
     const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
-    const openLightbox = useCallback((event, { photo, index }) => {
+    const openLightbox = useCallback((event, { index }) => {
         setCurrentImage(index);
         setViewerIsOpen(true);
     }, []);
@@ -34,38 +35,14 @@ function GalleryGrid() {
 
     return (
         <Container fluid>
-            <ImageGrid openLightbox={openLightbox} images={images}></ImageGrid>
-            <ImageModal currentImage={currentImage} viewerIsOpen={viewerIsOpen} closeLightbox={closeLightbox}></ImageModal>
+            <ImageGrid openLightbox={openLightbox} 
+                images={images} />
+            <ImageModal images={images} 
+                currentImage={currentImage} 
+                viewerIsOpen={viewerIsOpen} 
+                closeLightbox={closeLightbox} />
         </Container>
     );
 }
-
-const ImageGrid = ({openLightbox, images}) => (
-    <div class="gallery" id="gallery">
-        {images.map((image, index) => (
-            <div class="pics animation all" >
-                <img
-                    onClick={openLightbox.bind(image, index)}
-                    class="img-fluid"
-                    src={image}
-                    alt="Card  cap"
-                />
-            </div>
-        ))}
-    </div>
-)
-
-const ImageModal = (props) => (
-    <ModalGateway>
-        {props.viewerIsOpen ? <Modal onClose={props.closeLightbox}>
-            <Carousel currentIndex={props.currentImage} views={photos.map(x => ({
-                ...x,
-                srcset: x.srcSet,
-                caption: x.title
-            }))} />
-        </Modal> : null}
-    </ModalGateway>
-);
-
 
 export default GalleryGrid;
