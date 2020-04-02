@@ -6,7 +6,10 @@ function ImageGrid ({openLightbox, images}){
     return(
         <div className="gallery" id="gallery">
             {images.map((image, index) => (
-            <Flyer openLightbox={openLightbox} image={image} index={index} />
+            <Flyer openLightbox={openLightbox} 
+                image={image} 
+                index={index} 
+                />
             ))}
         </div>
     )
