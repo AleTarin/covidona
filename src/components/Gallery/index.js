@@ -21,7 +21,7 @@ function GalleryGrid() {
 
     return (
         <div>
-            {/* Using react gallery module */}
+            {/* Using react gallery module 2*/}
             <Gallery photos={photos} onClick={openLightbox} />
             <ModalGateway>
                 {viewerIsOpen ? (
