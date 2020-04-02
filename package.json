@@ -24,5 +24,8 @@
     "eject": "react-scripts eject",
     "build-css": "node-sass src/ -o src/",
     "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.1.2"
   }
 }
