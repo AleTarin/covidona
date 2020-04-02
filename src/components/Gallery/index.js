@@ -1,8 +1,22 @@
 import React, { useState, useCallback } from "react";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import { photos } from "./photos";
-import './style.css'
 import { Container } from "react-bootstrap";
+import './style.css'
+
+const images = [
+    "https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg",
+    "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg",
+    "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg",
+    "https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg",
+    "https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg",
+    "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg",
+    "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg",
+    "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg",
+    "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg",
+    "https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg",
+    "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg",
+]
 
 function GalleryGrid() {
     const [currentImage, setCurrentImage] = useState(0);
@@ -20,28 +34,15 @@ function GalleryGrid() {
 
     return (
         <Container fluid>
-            <ImageGrid openLightbox={openLightbox}></ImageGrid>
+            <ImageGrid openLightbox={openLightbox} images={images}></ImageGrid>
             <ImageModal currentImage={currentImage} viewerIsOpen={viewerIsOpen} closeLightbox={closeLightbox}></ImageModal>
         </Container>
     );
 }
 
-const ImageGrid = ({openLightbox}) => (
+const ImageGrid = ({openLightbox, images}) => (
     <div class="gallery" id="gallery">
-        {[
-            "https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg",
-            "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg",
-            "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg",
-            "https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg",
-            "https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg",
-            "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg",
-            "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg",
-            "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg",
-            "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg",
-            "https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg",
-            "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg",
-
-        ].map((image, index) => (
+        {images.map((image, index) => (
             <div class="pics animation all" >
                 <img
                     onClick={openLightbox.bind(image, index)}
