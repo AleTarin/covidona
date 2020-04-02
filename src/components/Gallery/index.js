@@ -34,13 +34,15 @@ function GalleryGrid() {
     };
 
     return (
-        <Container fluid>
+        <Container fluid="lg">
             <ImageGrid openLightbox={openLightbox} 
-                images={images} />
+                images={images} 
+                />
             <ImageModal images={images} 
                 currentImage={currentImage} 
                 viewerIsOpen={viewerIsOpen} 
-                closeLightbox={closeLightbox} />
+                closeLightbox={closeLightbox} 
+                />
         </Container>
     );
 }
