@@ -1,9 +1,22 @@
 import React, { useState, useCallback } from "react";
-import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import { photos } from "./photos";
+import { Container } from "react-bootstrap";
+import './style.css'
 
-
+const images = [
+    "https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg",
+    "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg",
+    "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg",
+    "https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg",
+    "https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg",
+    "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg",
+    "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg",
+    "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg",
+    "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg",
+    "https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg",
+    "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg",
+]
 
 function GalleryGrid() {
     const [currentImage, setCurrentImage] = useState(0);
@@ -20,25 +33,39 @@ function GalleryGrid() {
     };
 
     return (
-        <div>
-            {/* Using react gallery module 2*/}
-            <Gallery photos={photos} onClick={openLightbox} />
-            <ModalGateway>
-                {viewerIsOpen ? (
-                    <Modal onClose={closeLightbox}>
-                        <Carousel
-                            currentIndex={currentImage}
-                            views={photos.map(x => ({
-                                ...x,
-                                srcset: x.srcSet,
-                                caption: x.title
-                            }))}
-                        />
-                    </Modal>
-                ) : null}
-            </ModalGateway>
-        </div>
+        <Container fluid>
+            <ImageGrid openLightbox={openLightbox} images={images}></ImageGrid>
+            <ImageModal currentImage={currentImage} viewerIsOpen={viewerIsOpen} closeLightbox={closeLightbox}></ImageModal>
+        </Container>
     );
 }
+
+const ImageGrid = ({openLightbox, images}) => (
+    <div class="gallery" id="gallery">
+        {images.map((image, index) => (
+            <div class="pics animation all" >
+                <img
+                    onClick={openLightbox.bind(image, index)}
+                    class="img-fluid"
+                    src={image}
+                    alt="Card  cap"
+                />
+            </div>
+        ))}
+    </div>
+)
+
+const ImageModal = (props) => (
+    <ModalGateway>
+        {props.viewerIsOpen ? <Modal onClose={props.closeLightbox}>
+            <Carousel currentIndex={props.currentImage} views={photos.map(x => ({
+                ...x,
+                srcset: x.srcSet,
+                caption: x.title
+            }))} />
+        </Modal> : null}
+    </ModalGateway>
+);
+
 
 export default GalleryGrid;
