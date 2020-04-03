@@ -42,13 +42,16 @@
       align-items: center;
 
       .svg-shadow {
-        -webkit-transition: all 150ms ease;
-        transition: all 150ms ease;
+        -webkit-filter: none;
+        -webkit-transition: all 250ms ease;
+        filter: none;
+        transition: all 250ms ease;
         cursor: pointer;
         &:hover {
-          filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
-          -webkit-transition: all 150ms ease;
-          transition: all 150ms ease;
+          -webkit-filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
+          -webkit-transition: all 250ms ease;
+          filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
+          transition: all 250ms ease;
         }
       }
     }
@@ -56,13 +59,17 @@
 }
 
 .card-img, .card-img-top {
-  opacity: 1;
+  -webkit-filter: opacity(100%);
+  -webkit-backface-visibility: hidden;
   -webkit-transition: all 350ms ease;
+  filter: opacity(100%);
+  backface-visibility: hidden;
   transition: all 350ms ease;
   cursor: pointer;
   &:hover {
-    opacity: .8;
+    -webkit-filter: opacity(85%);
     -webkit-transition: all 350ms ease;
+    filter: opacity(85%);
     transition: all 350ms ease;
   }
  }  
