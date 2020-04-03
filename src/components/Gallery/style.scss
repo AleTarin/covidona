@@ -1,10 +1,13 @@
 .gallery {
+    line-height: 0;
+
     -webkit-column-count: 5;
     -moz-column-count: 5;
     column-count: 5;
-    -webkit-column-width: 20%;
-    -moz-column-width: 20%;
-    column-width: 20%;
+    -webkit-column-gap:   0px;
+    -moz-column-gap:      0px;
+    column-gap:           0px;  
+
   }
   
   @media (max-width: 450px) {
