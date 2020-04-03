@@ -1,10 +1,11 @@
 .gallery {
   -webkit-column-count: 5;
-  -webkit-column-gap: 10px;
   -moz-column-count: 5;
-  -moz-column-gap: 10px;
   column-count: 5;
-  column-gap: 10px;
+
+  -webkit-column-gap: 1em;
+  -moz-column-gap: 1em;
+  column-gap: 1em;
 }
 
 .container-lg {
@@ -13,7 +14,7 @@
   padding-right: 30px !important;
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1200px) {
   .gallery {
     -webkit-column-count: 4;
     -moz-column-count: 4;
@@ -44,4 +45,3 @@
     column-count: 1;
   }
 }
-  
