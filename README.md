@@ -20,6 +20,12 @@ COVIDONA is a website with the purpose to display donation flyers from all over 
 - (Desktop) New Modal component for Flyers image view. This should include a comments component.
 - (Mobile) Image view should be 50% - 50% on screen with comments section.
 
+## Contributors
+
+Alejandro de la Cruz  - ale.tarin10@gmail.com
+Jaime Gomez           - jaimegomez1994@gmail.com
+Javier Quintero       - jxquintero@hotmail.com
+
 ## Something Missing?
 
 If you have ideas for more “How To” recipes that should be on this page, [let us know](https://github.com/facebookincubator/create-react-app/issues) or [contribute some!](https://github.com/facebookincubator/create-react-app/edit/master/packages/react-scripts/template/README.md)
