@@ -22,9 +22,9 @@ COVIDONA is a website with the purpose to display donation flyers from all over 
 
 ## Contributors
 
-Alejandro de la Cruz  - ale.tarin10@gmail.com
-Jaime Gomez           - jaimegomez1994@gmail.com
-Javier Quintero       - jxquintero@hotmail.com
+- Alejandro de la Cruz  - ale.tarin10@gmail.com
+- Jaime Gomez           - jaimegomez1994@gmail.com
+- Javier Quintero       - jxquintero@hotmail.com
 
 ## Something Missing?
 
