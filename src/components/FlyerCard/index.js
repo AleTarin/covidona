@@ -6,7 +6,7 @@ import "./style.css";
 function Flyer({ image, openLightbox, index }) {
   const iconSize = "1.3em";
   return (
-    <div className="card-container" onClick={e => openLightbox(e, index)}>
+    <div className="card-container">
       <Card>
         <Card.Img
           variant="top"
@@ -20,12 +20,11 @@ function Flyer({ image, openLightbox, index }) {
           <Card.Text>Flyer location</Card.Text>
           <div className="card-buttons">
             {/* TODO Add hooks for click-handlers */}
-            <MdFavorite size={iconSize} color="DarkGray" />
-            <MdShare size={iconSize} color="Orange" />
-            <MdComment size={iconSize} color="DimGray" />
+            <MdFavorite className="svg-shadow" size={iconSize} color="DarkGray" />
+            <MdShare className="svg-shadow" size={iconSize} color="Orange" />
+            <MdComment className="svg-shadow" size={iconSize} color="DimGray" />
           </div>
         </Card.Body>
-        <Card.ImgOverlay />
       </Card>
     </div>
   );
