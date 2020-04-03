@@ -1,27 +1,34 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import './style.css'
+import { MdFavorite, MdComment, MdShare } from "react-icons/md";
+import "./style.css";
 
 function Flyer({ image, openLightbox, index }) {
-    return (
-        <Card className="pics animation">
-            <Card.Img 
-                variant="top" 
-                src={image}
-                onClick={openLightbox.bind(image, index)}
-                className="img-fluid"
-                alt="Card cap"
-                >
-            </Card.Img>
-            <Card.Body className="body">
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
-                </Card.Text>
-            </Card.Body>
-        </Card>
-    )
-} 
+  const iconSize = "1.3em";
+  return (
+    <div className="card-container" onClick={e => openLightbox(e, index)}>
+      <Card>
+        <Card.Img
+          variant="top"
+          src={image}
+          className="img-fluid"
+          alt={`Flyer #${index}`}
+          onClick={e => openLightbox(e, index)}
+        />
+        <Card.Body>
+          <Card.Title>Flyer Title</Card.Title>
+          <Card.Text>Flyer location</Card.Text>
+          <div className="card-buttons">
+            {/* TODO Add hooks for click-handlers */}
+            <MdFavorite size={iconSize} color="DarkGray" />
+            <MdShare size={iconSize} color="Orange" />
+            <MdComment size={iconSize} color="DimGray" />
+          </div>
+        </Card.Body>
+        <Card.ImgOverlay />
+      </Card>
+    </div>
+  );
+}
 
-export default Flyer
+export default Flyer;

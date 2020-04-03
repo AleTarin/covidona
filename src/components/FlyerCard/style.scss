@@ -1,19 +1,51 @@
-.pics {
-    overflow: hidden;
-    -webkit-transition: all 350ms ease;
-    transition: all 350ms ease;
-    margin-bottom: 1em;
-
-    width: 100% !important;
-    height: auto !important;
+.card-container {
+  break-inside: avoid;
 }
 
-.animation {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
- }
+.card {
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 0 1em;
 
-.body {
+  text-align: left;
+  border-radius: 0.65rem !important;
+  overflow: hidden;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+  &:hover {
+    -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16);
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease;
+    cursor: pointer;
+
+    .card-img-overlay {
+      background-color: rgba(255, 255, 255, 0.12);
+      -webkit-transition: all 350ms ease;
+      transition: all 350ms ease;
+    }
+  }
+
+  .card-body {
     text-align: left;
+    background-color: #f2f2f2;
+
+    .card-title {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .card-text:last-child {
+      font-size: 16px;
+    }
+
+    .card-buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
 }
