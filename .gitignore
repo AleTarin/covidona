@@ -8,12 +8,12 @@
 
 # production
 /build
-/.firebase
+/.firebase/*.cache
 src/**/*.css
 .firebaserc
 firebase.json
 package-lock.json
-/.github
+/.github/**/*.yml
 
 # misc
 .DS_Store

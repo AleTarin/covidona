@@ -14,8 +14,10 @@ COVIDONA is a website with the purpose to display donation flyers from all over 
 
 - Like implementation with cookie storage and context component.
 - Configure DB on Firebase. Create collection for Comments with foreign-key to Flyers index.
-- Get #TBD Flyers.
+- Create Dev environment.
+- Create Sass variables.
 - Documentation on enviroments, list dependencies and versions, as well as how to build/deploy.
+- Get #TBD Flyers.
 - Debut 2 weeks max.
 
 # Backlog
