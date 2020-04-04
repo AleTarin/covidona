@@ -10,7 +10,8 @@
 /build
 /.firebase
 src/**/*.css
-
+.firebaserc
+firebase.json
 package-lock.json
 
 # misc
