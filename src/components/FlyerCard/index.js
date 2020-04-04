@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Card, OverlayTrigger, Popover } from "react-bootstrap";
-import { MdFavorite, MdShare, MdFavoriteBorder } from "react-icons/md";
+import { MdShare } from "react-icons/md";
 import { GoCommentDiscussion } from "react-icons/go";
+import LikeButton from "./LikeButton";
 import "./style.css";
 
 function Flyer({ image, openLightbox, index }) {
-
-  const [like, setLike] = useState(false);
-  const likeHandle = () => setLike(!like);
 
   const iconSize = "1.3em";
 
@@ -16,7 +14,7 @@ function Flyer({ image, openLightbox, index }) {
       <Popover.Content>En desarrollo 🤖</Popover.Content>
     </Popover>
   );
-
+  
   return (
     <div className="card-container">
       <Card>
@@ -27,13 +25,9 @@ function Flyer({ image, openLightbox, index }) {
           <Card.Title>Flyer Title</Card.Title>
           <Card.Text>Flyer location</Card.Text>
           <div className="card-buttons">
-            {/* TODO Optimize conditionals */}
-            {!like ? 
-              <MdFavoriteBorder className="like-button" size={iconSize} color="DimGrey" onClick={likeHandle}/>
-              : <MdFavorite className="like-button" size={iconSize} color="Crimson" onClick={likeHandle}/>
-            }
+            <LikeButton size={iconSize} />
             <MdShare className="button" size={iconSize} color="Orange" />
-            <OverlayTrigger trigger="hover" placement="bottom" overlay={popover} delay={{ show:400, hide: 200 }}>
+            <OverlayTrigger placement="bottom" overlay={popover} delay={{ show:400, hide: 200 }}>
               <GoCommentDiscussion className="disabled-button" size={iconSize} color="LightGray"/>
             </OverlayTrigger>
           </div>
