@@ -34,12 +34,20 @@ jobs:
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
+<<<<<<< HEAD:.github/workflows/firebase-deploy-dev.yml
           args: use covidonadev
+=======
+          args: use covidona
+>>>>>>> master:.github/workflows/firebase-deploy.yml
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
       - name: Deploy Develop to Firebase
         uses: w9jds/firebase-action@master
         with:
+<<<<<<< HEAD:.github/workflows/firebase-deploy-dev.yml
           args: deploy --only hosting:covidonadev
+=======
+          args: deploy --only hosting
+>>>>>>> master:.github/workflows/firebase-deploy.yml
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
