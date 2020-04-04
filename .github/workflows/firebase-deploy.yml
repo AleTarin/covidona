@@ -34,7 +34,7 @@ jobs:
       - name: Deploy Prod to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: use covidona
+          args: use covidonaProd
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
       - name: Deploy Prod to Firebase
