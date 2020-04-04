@@ -10,8 +10,10 @@
 /build
 /.firebase
 src/**/*.css
-
+.firebaserc
+firebase.json
 package-lock.json
+/.github
 
 # misc
 .DS_Store
