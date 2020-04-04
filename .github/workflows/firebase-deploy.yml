@@ -2,7 +2,7 @@ name: Build and Deploy Develop
 on:
   pull_request:
     branches:
-      - master
+      - develop
 
 jobs:
   build:
