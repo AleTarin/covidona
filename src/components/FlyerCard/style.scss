@@ -1,3 +1,20 @@
+ // ANIMATIONS
+ @keyframes liked {
+  from {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  75% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+// Flyer Card
 .card-container {
   break-inside: avoid;
 }
@@ -10,11 +27,13 @@
   text-align: left;
   border-radius: 0.65rem !important;
   overflow: hidden;
+
   -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   -webkit-transition: all 350ms ease;
   transition: all 350ms ease;
+
   &:hover {
     -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16);
     -moz-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16);
@@ -40,24 +59,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-
-      .svg-shadow {
-        -webkit-filter: none;
-        -webkit-transition: all 250ms ease;
-        filter: none;
-        transition: all 250ms ease;
-        cursor: pointer;
-        &:hover {
-          -webkit-filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
-          -webkit-transition: all 250ms ease;
-          filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
-          transition: all 250ms ease;
-        }
-      }
     }
   }
 }
 
+// Flyer Image
 .card-img, .card-img-top {
   -webkit-filter: opacity(100%);
   -webkit-backface-visibility: hidden;
@@ -66,6 +72,7 @@
   backface-visibility: hidden;
   transition: all 350ms ease;
   cursor: pointer;
+
   &:hover {
     -webkit-filter: opacity(85%);
     -webkit-transition: all 350ms ease;
@@ -73,3 +80,28 @@
     transition: all 350ms ease;
   }
  }  
+
+ // Flyer Button Icons
+ .button, .like-button {
+  -webkit-filter: none;
+  -webkit-transition: all 250ms ease;
+  filter: none;
+  transition: all 250ms ease;
+  cursor: pointer;
+
+  &:hover {
+    -webkit-filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
+    -webkit-transition: all 250ms ease;
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
+    transition: all 250ms ease;
+  }
+}
+
+.like-button:not(active) {
+  animation: liked .25s ease-in-out;
+}
+
+.disabled-button {
+  color: lightgray;
+  opacity: .5;
+}
