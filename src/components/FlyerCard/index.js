@@ -8,8 +8,6 @@ function Flyer({ image, openLightbox, index }) {
 
   const [like, setLike] = useState(false);
   const likeHandle = () => setLike(!like);
-  
-  const [show, setShow] = useState(false);
 
   const iconSize = "1.3em";
 
@@ -35,10 +33,8 @@ function Flyer({ image, openLightbox, index }) {
               : <MdFavorite className="like-button" size={iconSize} color="Crimson" onClick={likeHandle}/>
             }
             <MdShare className="button" size={iconSize} color="Orange" />
-            <OverlayTrigger trigger="click" placement="bottom" overlay={popover} delay="2000ms">
-              <GoCommentDiscussion className="disabled-button" size={iconSize} color="LightGray"
-                onClick={() => setShow(!show)}
-              />
+            <OverlayTrigger trigger="hover" placement="bottom" overlay={popover} delay={{ show:400, hide: 200 }}>
+              <GoCommentDiscussion className="disabled-button" size={iconSize} color="LightGray"/>
             </OverlayTrigger>
           </div>
         </Card.Body>
