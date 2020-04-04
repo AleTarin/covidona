@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Build and Deploy Production
 on:
   pull_request:
     branches:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: Build
+    name: Build Prod
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -21,7 +21,7 @@ jobs:
           name: build
           path: build
   deploy:
-    name: Deploy
+    name: Deploy Prod
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -31,15 +31,15 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: build
-      - name: Deploy to Firebase
+      - name: Deploy Prod to Firebase
         uses: w9jds/firebase-action@master
         with:
           args: use covidona
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-      - name: Deploy to Firebase
+      - name: Deploy Prod to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting
+          args: deploy --only hosting:covidona-mx
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
