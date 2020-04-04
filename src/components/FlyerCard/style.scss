@@ -1,3 +1,5 @@
+ @import './vars.scss';
+ 
  // ANIMATIONS
  @keyframes liked {
   from {
@@ -28,23 +30,23 @@
   border-radius: 0.65rem !important;
   overflow: hidden;
 
-  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  -webkit-transition: all 350ms ease;
-  transition: all 350ms ease;
+  -webkit-box-shadow: 0 4px 4px 0 $dropShadow;
+  -moz-box-shadow: 0 4px 4px 0 $dropShadow;
+  box-shadow: 0 4px 4px 0 $dropShadow;
+  -webkit-transition: all 320ms ease;
+  transition: all 320ms ease;
 
   &:hover {
-    -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16);
-    -moz-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16);
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16);
-    -webkit-transition: all 350ms ease;
-    transition: all 350ms ease;
+    -webkit-box-shadow: 0 8px 16px 0 $dropShadow;
+    -moz-box-shadow: 0 8px 16px 0 $dropShadow;
+    box-shadow: 0 8px 16px 0 $dropShadow;
+    -webkit-transition: all 320ms ease;
+    transition: all 320ms ease;
   }
 
   .card-body {
     text-align: left;
-    background-color: #f2f2f2;
+    background-color: $cardBodyBackgroundColor;
 
     .card-title {
       margin: 0;
@@ -90,9 +92,9 @@
   cursor: pointer;
 
   &:hover {
-    -webkit-filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
+    -webkit-filter: drop-shadow(0 2px 2px $dropShadow);
     -webkit-transition: all 250ms ease;
-    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0 2px 2px $dropShadow);
     transition: all 250ms ease;
   }
 }
@@ -102,6 +104,6 @@
 }
 
 .disabled-button {
-  color: lightgray;
+  color: $buttonDisabled;
   opacity: .5;
 }
