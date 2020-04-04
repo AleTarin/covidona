@@ -1,5 +1,8 @@
 # COVIDONA
-Developed by Front-End-Pistols. https://covidona-mx.web.app/
+Developed by Front-End-Pistols. 
+
+- Prod https://covidona-mx.web.app/
+- Dev  https://covidonadev.web.app/
 
 ## Description
 

@@ -13,6 +13,7 @@ src/**/*.css
 .firebaserc
 firebase.json
 package-lock.json
+/.github/**/*.yml
 
 # misc
 .DS_Store
