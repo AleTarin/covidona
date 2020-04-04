@@ -27,7 +27,7 @@ function Flyer({ image, openLightbox, index }) {
           <Card.Title>Flyer Title</Card.Title>
           <Card.Text>Flyer location</Card.Text>
           <div className="card-buttons">
-            {/* TODO Optimize conditional */}
+            {/* TODO Optimize conditionals */}
             {!like ? 
               <MdFavoriteBorder className="like-button" size={iconSize} color="DimGrey" onClick={likeHandle}/>
               : <MdFavorite className="like-button" size={iconSize} color="Crimson" onClick={likeHandle}/>

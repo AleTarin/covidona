@@ -1,12 +1,12 @@
-name: Build and Deploy
+name: Build and Deploy Develop
 on:
   pull_request:
     branches:
-      - master
+      - develop
 
 jobs:
   build:
-    name: Build
+    name: Build Dev
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -21,7 +21,7 @@ jobs:
           name: build
           path: build
   deploy:
-    name: Deploy
+    name: Deploy Dev
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -34,12 +34,12 @@ jobs:
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: use covidona
+          args: use covidonaDev
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-      - name: Deploy to Firebase
+      - name: Deploy Develop to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting
+          args: deploy --only hosting:covidona-mx-dev
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
