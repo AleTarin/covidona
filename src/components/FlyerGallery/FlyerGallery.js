@@ -3,7 +3,7 @@ import ImageGrid from "./FlyerGrid";
 import ImageModal from "./FlyerModal";
 import { Container } from "react-bootstrap";
 import FlyerContext from '../../containers/FlyerProvider'
-import "./style.css";
+import "./style.scss";
 
 // TODO Send to DB and call from containers
 const images = [

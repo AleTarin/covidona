@@ -1,6 +1,6 @@
 import React from "react";
 import Carousel, { Modal, ModalGateway } from "react-images";
-import "./style.css";
+import "./style.scss";
 
 function ImageModal(props) {
   return (
