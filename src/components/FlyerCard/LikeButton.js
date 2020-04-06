@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
-import "./style.css";
+import "./style.scss";
 
 function LikeButton({ iconSize }) {
   

@@ -1,6 +1,6 @@
 import React from "react";
 import Flyer from "../FlyerCard";
-import "./style.css";
+import "./style.scss";
 
 function ImageGrid({ openLightbox, images }) {
   return (
