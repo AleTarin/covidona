@@ -3,7 +3,7 @@ import { Card, OverlayTrigger, Popover } from "react-bootstrap";
 import { MdShare } from "react-icons/md";
 import { GoCommentDiscussion } from "react-icons/go";
 import LikeButton from "./LikeButton";
-import "./style.css";
+import "./style.scss";
 
 function Flyer({ image, openLightbox, index }) {
 
@@ -11,7 +11,7 @@ function Flyer({ image, openLightbox, index }) {
 
   const popover = (
     <Popover id="popover-basic" placement="bottom">
-      <Popover.Content>En desarrollo 🤖</Popover.Content>
+      <Popover.Content>En desarrollo <span role="img" aria-label="Bot">🤖</span></Popover.Content>
     </Popover>
   );
   
