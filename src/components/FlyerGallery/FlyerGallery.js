@@ -1,7 +1,8 @@
 import React, { useState, useCallback } from "react";
-import ImageGrid from "./ImageGrid";
-import ImageModal from "./ImageModal";
+import ImageGrid from "./FlyerGrid";
+import ImageModal from "./FlyerModal";
 import { Container } from "react-bootstrap";
+import FlyerContext from '../../containers/FlyerProvider'
 import "./style.css";
 
 // TODO Send to DB and call from containers
@@ -20,11 +21,12 @@ const images = [
 ];
 
 function GalleryGrid() {
+  const flyers = React.useContext(FlyerContext);
+
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
   const openLightbox = useCallback((_event, index) => {
-    console.log(index)
     setCurrentImage(index);
     setViewerIsOpen(true);
   }, []);
@@ -36,6 +38,7 @@ function GalleryGrid() {
 
   return (
     <Container fluid="lg">
+      {JSON.stringify(flyers)}
       <ImageGrid openLightbox={openLightbox} images={images} />
       <ImageModal
         images={images}
