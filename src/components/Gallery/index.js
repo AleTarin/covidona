@@ -2,7 +2,7 @@ import React, { useState, useCallback } from "react";
 import ImageGrid from "./ImageGrid";
 import ImageModal from "./ImageModal";
 import { Container } from "react-bootstrap";
-import "./style.css";
+import "./style.scss";
 
 // TODO Send to DB and call from containers
 const images = [

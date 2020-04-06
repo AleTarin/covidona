@@ -2,7 +2,7 @@ import React from "react";
 import covidona from "../media/images/covidona.png";
 import { Navbar } from "react-bootstrap";
 import Gallery from "../components/Gallery";
-import "../sass/App.css";
+import "../sass/App.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
