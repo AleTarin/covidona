@@ -107,3 +107,21 @@
   color: $buttonDisabled;
   opacity: .5;
 }
+
+// Share List
+.whatsapp, .facebook, .twitter, .email, .copiarLink {
+  color:  var(--color-neutral-900) !important;
+  border-bottom: 1px solid var(--color-neutral-1000-alpha-2);
+  margin: 0px 2px;
+  cursor: pointer;
+  &:hover {
+    background-color: $cardBodyBackgroundColor;
+  }
+}
+.whatsapp {
+  margin-top: 2px;
+}
+.copiarLink {
+  margin: 0px 2px 2px;
+  border-bottom: 0px;
+}

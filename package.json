@@ -11,7 +11,8 @@
     "react-icons": "^3.9.0",
     "react-images": "^1.1.0",
     "react-photo-gallery": "^8.0.0",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-share": "^4.1.0"
   },
   "devDependencies": {
     "node-sass": "^4.13.1",

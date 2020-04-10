@@ -1,12 +1,12 @@
 import React from "react";
 import { Card, OverlayTrigger, Popover } from "react-bootstrap";
-import { MdShare } from "react-icons/md";
 import { GoCommentDiscussion } from "react-icons/go";
-import LikeButton from "./LikeButton";
+import LikeButton from "./Buttons/LikeButton";
+import ShareButton from "./Buttons/ShareButton";
 import "./style.scss";
 
 function Flyer({ image, openLightbox, index }) {
-
+  
   const iconSize = "1.3em";
 
   const popover = (
@@ -26,7 +26,7 @@ function Flyer({ image, openLightbox, index }) {
           <Card.Text>Flyer location</Card.Text>
           <div className="card-buttons">
             <LikeButton size={iconSize} />
-            <MdShare className="button" size={iconSize} color="Orange" />
+            <ShareButton size={iconSize} />
             <OverlayTrigger placement="bottom" overlay={popover} delay={{ show:400, hide: 200 }}>
               <GoCommentDiscussion className="disabled-button" size={iconSize} color="LightGray"/>
             </OverlayTrigger>
