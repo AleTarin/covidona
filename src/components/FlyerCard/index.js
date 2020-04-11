@@ -26,7 +26,7 @@ function Flyer({ image, openLightbox, index }) {
           <Card.Text>Flyer location</Card.Text>
           <div className="card-buttons">
             <LikeButton size={iconSize} />
-            <ShareButton size={iconSize} />
+            <ShareButton size={iconSize} imgURL={image} />
             <OverlayTrigger placement="bottom" overlay={popover} delay={{ show:400, hide: 200 }}>
               <GoCommentDiscussion className="disabled-button" size={iconSize} color="LightGray"/>
             </OverlayTrigger>
