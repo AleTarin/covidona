@@ -1,19 +1,19 @@
 import PropTypes from "prop-types";
 import React, { useState } from "react";
 import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
-import "./style.scss";
+import "../style.scss";
 
 function LikeButton({ iconSize }) {
   
-  const [like, setLike] = useState(false);
-  const likeHandle = () => setLike(!like);
+  const [click, setClick] = useState(false);
+  const clickHandle = () => setClick(!click);
 
   return (
     <span>
       {/* TODO Optimize conditionals */}
-      {!like ? 
-        <MdFavoriteBorder className="like-button" size={iconSize} color="DimGrey" onClick={likeHandle} />
-        : <MdFavorite className="like-button" size={iconSize} color="Crimson" onClick={likeHandle} />
+      {!click ? 
+        <MdFavoriteBorder className="like-button" size={iconSize} color="DimGrey" onClick={clickHandle} />
+        : <MdFavorite className="like-button" size={iconSize} color="Crimson" onClick={clickHandle} />
       }
     </span>
   );
