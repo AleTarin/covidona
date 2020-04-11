@@ -21,7 +21,7 @@ const images = [
 ];
 
 function GalleryGrid() {
-  const flyers = React.useContext(FlyerContext);
+  const {loading, flyers} = React.useContext(FlyerContext);
 
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);

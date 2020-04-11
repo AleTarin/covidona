@@ -14,7 +14,11 @@ const FlyerProvider = ({ children }) => {
   const fetchFlyers = async (_) => {
     setLoading(true);
     const snapshot = await db.collection("flyers").get();
-    setFlyers(snapshot.docs.map((doc) => doc.data()));
+    setFlyers(snapshot.docs.map((doc) => {
+      return {
+        FID: doc.id,
+        ...doc.data()}
+    }));
     setLoading(false);
   };
 
