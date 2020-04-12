@@ -5,30 +5,34 @@ import LikeButton from "./Buttons/LikeButton";
 import ShareButton from "./Buttons/ShareButton";
 import "./style.scss";
 
-function Flyer({ image, openLightbox, index }) {
-  
+function Flyer({ src, openLightbox, FID, title, location }) {
   const iconSize = "1.3em";
-
-  const popover = (
-    <Popover id="popover-basic" placement="bottom">
-      <Popover.Content>En desarrollo <span role="img" aria-label="Bot">🤖</span></Popover.Content>
-    </Popover>
-  );
-  
   return (
-    <div className="card-container">
+    <div className="card-container" key={FID}>
       <Card>
-        <Card.Img variant="top" src={image} className="img-fluid" alt={`Flyer #${index}`}
-          onClick={e => openLightbox(e, index)}
+        <Card.Img
+          variant="top"
+          src={src}
+          className="img-fluid"
+          alt={`Flyer #${FID}`}
+          onClick={(e) => openLightbox(FID)}
         />
         <Card.Body>
-          <Card.Title>Flyer Title</Card.Title>
-          <Card.Text>Flyer location</Card.Text>
+          <Card.Title>{title}</Card.Title>
+          <Card.Text>{location}</Card.Text>
           <div className="card-buttons">
             <LikeButton size={iconSize} />
-            <ShareButton size={iconSize} imgURL={image} />
-            <OverlayTrigger placement="bottom" overlay={popover} delay={{ show:400, hide: 200 }}>
-              <GoCommentDiscussion className="disabled-button" size={iconSize} color="LightGray"/>
+            <ShareButton size={iconSize} imgURL={src} />
+            <OverlayTrigger
+              placement="bottom"
+              overlay={popover}
+              delay={{ show: 400, hide: 200 }}
+            >
+              <GoCommentDiscussion
+                className="disabled-button"
+                size={iconSize}
+                color="LightGray"
+              />
             </OverlayTrigger>
           </div>
         </Card.Body>
@@ -36,5 +40,16 @@ function Flyer({ image, openLightbox, index }) {
     </div>
   );
 }
+
+const popover = (
+  <Popover id="popover-basic" placement="bottom">
+    <Popover.Content>
+      En desarrollo{" "}
+      <span role="img" aria-label="Bot">
+        🤖
+      </span>
+    </Popover.Content>
+  </Popover>
+);
 
 export default Flyer;

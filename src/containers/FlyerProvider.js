@@ -1,34 +1,18 @@
 // store.js
-import React, { useState, useEffect, createContext } from "react";
-import { db } from "../services/firebase";
-
+import React, { createContext } from "react";
+import useFlyers from "../hooks/useFlyers";
+import { useParams } from "react-router-dom";
 const FlyerContext = createContext({
   loading: false,
   flyers: [],
 });
 
 const FlyerProvider = ({ children }) => {
-  const [flyers, setFlyers] = useState([]);
-  const [loading, setLoading] = useState(false);
-
-  const fetchFlyers = async (_) => {
-    setLoading(true);
-    const snapshot = await db.collection("flyers").get();
-    setFlyers(snapshot.docs.map((doc) => {
-      return {
-        FID: doc.id,
-        ...doc.data()}
-    }));
-    setLoading(false);
-  };
-
-  useEffect((_) => {
-    fetchFlyers();
-  }, []);
-
+  const { FID } = useParams();
+  const { flyers, loading } = useFlyers();
   return (
-    <FlyerContext.Provider value={{ loading, flyers }}>
-      {children}
+    <FlyerContext.Provider value={{ loading, flyers, FID }}>
+      {loading ? <> ... </> : children}
     </FlyerContext.Provider>
   );
 };

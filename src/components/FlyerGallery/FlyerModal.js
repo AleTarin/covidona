@@ -2,16 +2,14 @@ import React from "react";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import "./style.scss";
 
-function ImageModal(props) {
+function FlyerModal({ currentImage, closeLightbox, viewerIsOpen, images }) {
   return (
     <ModalGateway>
-      {props.viewerIsOpen ? (
-        <Modal onClose={props.closeLightbox}>
+      {viewerIsOpen ? (
+        <Modal onClose={closeLightbox}>
           <Carousel
-            currentIndex={props.currentImage}
-            views={props.images.map(x => ({
-              src: x
-            }))}
+            currentIndex={currentImage}
+            views={images}
           />
         </Modal>
       ) : null}
@@ -19,4 +17,4 @@ function ImageModal(props) {
   );
 }
 
-export default ImageModal;
+export default FlyerModal;

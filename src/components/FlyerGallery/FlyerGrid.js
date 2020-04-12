@@ -2,14 +2,17 @@ import React from "react";
 import Flyer from "../FlyerCard";
 import "./style.scss";
 
-function ImageGrid({ openLightbox, images }) {
+function FlyerGrid({ openLightbox, images }) {
   return (
     <div className="gallery" id="gallery">
-      {images.map((image, index) => (
-        <Flyer key={index} openLightbox={openLightbox} image={image} index={index} />
+      {images.map((flyer) => (
+        <Flyer
+          openLightbox={openLightbox}
+          {...flyer}
+        />
       ))}
     </div>
   );
 }
 
-export default ImageGrid;
+export default FlyerGrid;
