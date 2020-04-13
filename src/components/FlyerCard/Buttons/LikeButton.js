@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React, { useState } from "react";
 import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
 import "../style.scss";
@@ -16,6 +17,10 @@ function LikeButton({ iconSize }) {
       }
     </span>
   );
+}
+
+LikeButton.propTypes = {
+  iconSize: PropTypes.number
 }
 
 export default LikeButton;
