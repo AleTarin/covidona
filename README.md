@@ -20,7 +20,6 @@ COVIDONA is a website with the purpose to display donation flyers from all over 
 - New NavBar/Toolbar design. Change footer no sticky.
 - Change footer.
 - Remove hardcoded title for share buttons.
-- Documentation on enviroments, list dependencies and versions, as well as how to build/deploy.
 - Get #TBD Flyers.
 - Debut 2 weeks max.
 
@@ -28,6 +27,7 @@ COVIDONA is a website with the purpose to display donation flyers from all over 
 
 - (Desktop) New Modal component for Flyers image view. This should include a comments component.
 - (Mobile) Image view should be 50% - 50% on screen with comments section.
+- Documentation on enviroments, list dependencies and versions, as well as how to build/deploy.
 
 ## Contributors
 
