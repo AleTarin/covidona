@@ -1,0 +1,18 @@
+{
+    "LABELS": {   
+        "BUTTONS": {
+            "SHARE": {
+                "WHATSAPP": "Enviar como mensaje por Whatsapp",
+                "FACEBOOK": "Compartir en Facebook",
+                "TWITTER":  "Compartir en Twitter",
+                "EMAIL": "Enviar como correo electrónico",
+                "COPY": "Copiar liga URL"
+            }
+        },
+        "RESPONSE": {
+            "SHARE": {
+                "COPY": "¡Copiado!"
+            }
+        }
+    }
+}
