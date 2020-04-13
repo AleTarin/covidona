@@ -16,12 +16,12 @@ const useFlyers = () => {
       }))
     );
     setLoading(false);
-  });
-
+  }, []);
+  /* eslint-disable */
   useEffect((_) => {
     fetchFlyers();
   }, []);
-
+  /* eslint-enable */
   return {
     flyers,
     loading,
