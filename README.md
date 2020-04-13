@@ -12,7 +12,7 @@ COVIDONA is a website with the purpose to display donation flyers from all over 
 
 ## TODO
 
-- ~~Like implementation with cookie storage and context component.
+- ~~Like implementation with cookie storage and context component.~~
 - ~~Configure DB on Firebase. Create collection for Comments with foreign-key to Flyers index.~~
 - ~~Create Dev environment.~~
 - ~~Create Sass variables.~~
