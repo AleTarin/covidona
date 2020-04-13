@@ -14,6 +14,8 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Build
+        env:
+          NODE_ENV: development
         run: npm run build
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
