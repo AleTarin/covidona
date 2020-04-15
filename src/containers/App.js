@@ -1,8 +1,8 @@
 import React from "react";
 import { Navbar, Container } from "react-bootstrap";
 import Header from '../components/Header'
-import FlyerGallery from "../components/FlyerGallery";
-import { FlyerProvider } from "./FlyerProvider";
+import FlayerGallery from "../components/FlayerGallery";
+import { FlayerProvider } from "./FlayerProvider";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import labelData from "../labels.json";
 import "../sass/App.scss";
@@ -25,18 +25,18 @@ const AppContainer = (props) => {
     <div className="App">
         <Header />
         <Description />
-        <Flyers />
+        <Flayers />
         <Footer />
     </div>
   );
 };
 
-const Flyers = (_props) => {
+const Flayers = (_props) => {
   return (
     <section className="App-intro">
-      <FlyerProvider>
-        <FlyerGallery />
-      </FlyerProvider>
+      <FlayerProvider>
+        <FlayerGallery />
+      </FlayerProvider>
     </section>
   );
 };
@@ -49,11 +49,9 @@ const Description = (_props) => (
 
 const Footer = (_props) => (
   <Navbar bg="light">
-    <Container>
       <Navbar.Brand className="footer">
         {LABELS.NAVBAR.FOOTER}
       </Navbar.Brand>
-    </Container>
   </Navbar>
 );
 export default App;
