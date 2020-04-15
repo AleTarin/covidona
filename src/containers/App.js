@@ -1,9 +1,12 @@
 import React from "react";
-import covidona from "../media/images/covidona.png";
-import { Navbar } from "react-bootstrap";
+import { Navbar, Container } from "react-bootstrap";
+import Header from '../components/Header'
 import FlyerGallery from "../components/FlyerGallery";
 import { FlyerProvider } from "./FlyerProvider";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import labelData from "../labels.json";
+import "../sass/App.scss";
+const LABELS = labelData.LABELS;
 
 function App() {
   return (
@@ -20,11 +23,10 @@ function App() {
 const AppContainer = (props) => {
   return (
     <div className="App">
-      <Header />
-      <Division />
-      <Flyers />
-      <Division />
-      <Footer />
+        <Header />
+        <Description />
+        <Flyers />
+        <Footer />
     </div>
   );
 };
@@ -39,19 +41,19 @@ const Flyers = (_props) => {
   );
 };
 
-const Header = (_props) => (
-  <>
-    <div className="App-header" />
-    <img src={covidona} className="img-fluid" alt="logo" />
-  </>
+const Description = (_props) => (
+  <div className="description">
+    <Container>{LABELS.HOMEPAGE.DESCRIPTION}</Container>
+  </div>
 );
-const Division = (_props) => <div className="h2">...</div>;
 
 const Footer = (_props) => (
-  <Navbar bg="light" fixed="bottom">
-    <Navbar.Brand href="#home">
-      Developed by Front-End-Pistols. Powered by Roro
-    </Navbar.Brand>
+  <Navbar bg="light">
+    <Container>
+      <Navbar.Brand className="footer">
+        {LABELS.NAVBAR.FOOTER}
+      </Navbar.Brand>
+    </Container>
   </Navbar>
 );
 export default App;

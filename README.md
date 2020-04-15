@@ -17,8 +17,8 @@ COVIDONA is a website with the purpose to display donation flyers from all over 
 - ~~Create Dev environment.~~
 - ~~Create Sass variables.~~
 - ~~Implement React-Router for flyers images when sharing.~~
-- New NavBar/Toolbar design. Change footer no sticky.
-- Change footer.
+- ~~New NavBar/Toolbar design. Change footer no sticky.~~
+- ~~Change footer.~~
 - Remove hardcoded title for share buttons.
 - Get #TBD Flyers.
 - Debut 2 weeks max.
