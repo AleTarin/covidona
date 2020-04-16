@@ -1,14 +1,14 @@
 import { useState, useCallback, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
-const useFlyerModal = (flyers, FID) => {
+const useFlayerModal = (flayers, FID) => {
   let history = useHistory();
-  const [currentFlyer, setCurrentImage] = useState(-1);
+  const [currentFlayer, setCurrentImage] = useState(-1);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
   /* eslint-disable */
   useEffect(
     (_) => {
-      const index = findFlyerIndex(FID);
+      const index = findFlayerIndex(FID);
       openModal(index);
     },
     [FID]
@@ -23,8 +23,8 @@ const useFlyerModal = (flyers, FID) => {
     history.push(`/`);
   });
   /* eslint-enable */
-  const findFlyerIndex = (FID) =>
-    flyers ? flyers.findIndex((flyer) => flyer.FID === FID) : -1;
+  const findFlayerIndex = (FID) =>
+    flayers ? flayers.findIndex((flayer) => flayer.FID === FID) : -1;
 
   const openModal = useCallback((index) => {
     setCurrentImage(index);
@@ -34,9 +34,9 @@ const useFlyerModal = (flyers, FID) => {
   return {
     closeLightbox,
     openLightbox,
-    currentFlyer,
+    currentFlayer,
     viewerIsOpen,
   };
 };
 
-export default useFlyerModal;
+export default useFlayerModal;

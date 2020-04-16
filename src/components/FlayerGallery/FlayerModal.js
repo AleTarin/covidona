@@ -2,7 +2,7 @@ import React from "react";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import "./style.scss";
 
-function FlyerModal({ currentImage, closeLightbox, viewerIsOpen, images }) {
+function FlayerModal({ currentImage, closeLightbox, viewerIsOpen, images }) {
   return (
     <ModalGateway>
       {viewerIsOpen ? (
@@ -17,4 +17,4 @@ function FlyerModal({ currentImage, closeLightbox, viewerIsOpen, images }) {
   );
 }
 
-export default FlyerModal;
+export default FlayerModal;
