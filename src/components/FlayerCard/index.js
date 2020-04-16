@@ -19,7 +19,7 @@ function Flayer({ ...flayer }) {
         />
         <Card.Body>
           <Card.Title onClick={(e) => flayer.openLightbox(flayer.FID)}>{flayer.title}</Card.Title>
-          <Card.Text>{flayer.location}</Card.Text>
+          <Card.Text className="card-text">{flayer.location}</Card.Text>
           <div className="card-buttons">
             <LikeButton size={iconSize} />
             <ShareButton size={iconSize} {...flayer}/>

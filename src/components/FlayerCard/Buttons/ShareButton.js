@@ -58,7 +58,7 @@ function ShareButton({ iconSize, ...flayer }) {
         </Popover.Content>
         {/* TODO simplify with a function */}
         {!copyURL ? (
-        <CopyToClipboard text={`${LABELS.HOMEPAGE.HOMELOCATION}/${flayer.FID}`} onCopy={copyHandle}>
+        <CopyToClipboard text={`${flayer.src}`} onCopy={copyHandle}>
             <Popover.Content className="copy-link">
             {LABELS.BUTTONS.SHARE.COPY}
             </Popover.Content>

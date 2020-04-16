@@ -50,12 +50,13 @@
 
     .card-title {
       margin: 0;
-      font-size: 20px;
+      font-size: 1.05rem;
       cursor: pointer;
     }
 
-    .card-text:last-child {
-      font-size: 16px;
+    .card-text {
+      font-size: .90rem;
+      color: var(--color-neutral-1000-alpha-4);
     }
 
     .card-buttons {
