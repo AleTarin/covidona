@@ -1,18 +1,18 @@
 import React from "react";
-import Flyer from "../FlyerCard";
+import Flayer from "../FlayerCard";
 import "./style.scss";
 
-function FlyerGrid({ openLightbox, images }) {
+function FlayerGrid({ openLightbox, images }) {
   return (
     <div className="gallery" id="gallery">
-      {images.map((flyer) => (
-        <Flyer
+      {images.map((flayer) => (
+        <Flayer
           openLightbox={openLightbox}
-          {...flyer}
+          {...flayer}
         />
       ))}
     </div>
   );
 }
 
-export default FlyerGrid;
+export default FlayerGrid;

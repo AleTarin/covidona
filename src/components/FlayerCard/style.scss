@@ -16,7 +16,7 @@
   }
 }
 
-// Flyer Card
+// Flayer Card
 .card-container {
   break-inside: avoid;
 }
@@ -51,6 +51,7 @@
     .card-title {
       margin: 0;
       font-size: 20px;
+      cursor: pointer;
     }
 
     .card-text:last-child {
@@ -65,7 +66,7 @@
   }
 }
 
-// Flyer Image
+// Flayer Image
 .card-img, .card-img-top {
   -webkit-filter: opacity(100%);
   -webkit-backface-visibility: hidden;
@@ -83,7 +84,7 @@
   }
  }  
 
- // Flyer Button Icons
+ // Flayer Button Icons
  .button, .like-button {
   -webkit-filter: none;
   -webkit-transition: all 250ms ease;
