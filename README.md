@@ -1,12 +1,11 @@
 # COVIDONA
 Developed by Front-End-Pistols. 
 
-- Prod https://covidona-mx.web.app/
-- Dev  https://covidonadev.web.app/
-
 ## Description
 
 COVIDONA is a website with the purpose to display donation flayers from all over Mexico.
+- Prod https://covidona-mx.web.app/
+- Dev  https://covidonadev.web.app/
 
 # PHASE 1
 
