@@ -30,13 +30,13 @@ function ShareButton({ iconSize, ...flayer }) {
         {/* TODO Simplify with a function */}
         <Popover.Content className="share-buttons">
         <WhatsappShareButton 
-          title={`${flayer.title} de ${flayer.location}`} 
-          url={`\n${LABELS.HOMEPAGE.HOMELOCATION}\nFlayer: ${flayer.src}`}
+          title={`${flayer.title} de ${flayer.location}\n`} 
+          url={`${LABELS.HOMEPAGE.HOMELOCATION}\n${LABELS.BUTTONS.SHARE.EMAIL.BODY2}\nFlayer: ${flayer.src}`}
           >
             <WhatsappIcon borderRadius="10" size="40" />
         </WhatsappShareButton>
         <FacebookShareButton 
-          quote={`${flayer.title} de ${flayer.location}${LABELS.BUTTONS.SHARE.FACEBOOK.QUOTE}\n${LABELS.HOMEPAGE.HOMELOCATION}\n\nFlayer: `} 
+          quote={`${flayer.title} de ${flayer.location}\n${LABELS.HOMEPAGE.HOMELOCATION}\n${LABELS.BUTTONS.SHARE.FACEBOOK.QUOTE}\n\nFlayer: `} 
           url={`${flayer.src}`}
           >
             <FacebookIcon borderRadius="10" size="40" />
