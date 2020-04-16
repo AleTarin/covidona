@@ -19,7 +19,7 @@ COVIDONA is a website with the purpose to display donation flayers from all over
 - ~~Implement React-Router for flayers images when sharing.~~
 - ~~New NavBar/Toolbar design. Change footer no sticky.~~
 - ~~Change footer.~~
-- Remove hardcoded title for share buttons.
+- ~~Remove hardcoded title for share buttons.~~
 - Get #TBD Flayers.
 - Debut 2 weeks max.
 
