@@ -29,6 +29,7 @@ COVIDONA is a website with the purpose to display donation flayers from all over
 - (Mobile) Image view should be 50% - 50% on screen with comments section.
 - Documentation on enviroments, list dependencies and versions, as well as how to build/deploy.
 - Fix like button when reloading page.
+- Add Skeleton grid while loading.
 
 ## Contributors
 

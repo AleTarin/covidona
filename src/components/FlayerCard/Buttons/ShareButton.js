@@ -14,10 +14,10 @@ import {
 } from "react-share";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import "../style.scss";
-
 const LABELS = labelData.LABELS;
 
-function ShareButton({ imgURL, iconSize }) {
+function ShareButton({ iconSize, ...flayer }) {
+
   const [copyURL, setCopyURL] = useState(false);
   const copyHandle = () => setCopyURL(!copyURL);
 
@@ -27,33 +27,47 @@ function ShareButton({ imgURL, iconSize }) {
 
   const shareList = (
     <Popover id="popover-contained">
-      {/* TODO Simplify with a function */}
-      <Popover.Content className="share-buttons">
-        <WhatsappShareButton title="Flayer title" url={imgURL}>
-          <WhatsappIcon borderRadius="10" size="40" />
+        {/* TODO Simplify with a function */}
+        <Popover.Content className="share-buttons">
+        <WhatsappShareButton 
+          title={`${flayer.title} de ${flayer.location}`} 
+          url={`http://covidona-mx.web.app/${flayer.FID}`}
+          >
+            <WhatsappIcon borderRadius="10" size="40" />
         </WhatsappShareButton>
-        <FacebookShareButton title="Flayer title" url={imgURL}>
-          <FacebookIcon borderRadius="10" size="40" />
+        <FacebookShareButton 
+          quote={`${flayer.title} de ${flayer.location}${LABELS.BUTTONS.SHARE.FACEBOOK.QUOTE}`} 
+          url={`http://covidona-mx.web.app/${flayer.FID}`}
+          >
+            <FacebookIcon borderRadius="10" size="40" />
         </FacebookShareButton>
-        <TwitterShareButton title="Flayer title" url={imgURL}>
-          <TwitterIcon borderRadius="10" size="40" />
+        <TwitterShareButton 
+          title={`${flayer.title} de ${flayer.location}`} 
+          url={`http://covidona-mx.web.app/${flayer.FID}`}
+          >
+            <TwitterIcon borderRadius="10" size="40" />
         </TwitterShareButton>
-        <EmailShareButton title="Flayer title" url={imgURL}>
-          <EmailIcon borderRadius="10" size="40" />
+        <EmailShareButton 
+          subject={LABELS.BUTTONS.SHARE.EMAIL.SUBJECT} 
+          body={`${LABELS.BUTTONS.SHARE.EMAIL.BODY1}${flayer.title} de ${flayer.location}`} 
+          url={`\nhttp://covidona-mx.web.app/${flayer.FID} ${LABELS.BUTTONS.SHARE.EMAIL.BODY2}`}
+          separator=" " 
+          >
+            <EmailIcon borderRadius="10" size="40" />
         </EmailShareButton>
-      </Popover.Content>
-      {/* TODO simplify with a function */}
-      {!copyURL ? (
-        <CopyToClipboard text={imgURL} onCopy={copyHandle}>
-          <Popover.Content className="copy-link">
-            {LABELS.BUTTONS.SHARE.COPY}
-          </Popover.Content>
-        </CopyToClipboard>
-      ) : (
-        <Popover.Content className="copied-link">
-          {LABELS.RESPONSE.SHARE.COPY}
         </Popover.Content>
-      )}
+        {/* TODO simplify with a function */}
+        {!copyURL ? (
+        <CopyToClipboard text={`http://covidona-mx.web.app/${flayer.FID}`} onCopy={copyHandle}>
+            <Popover.Content className="copy-link">
+            {LABELS.BUTTONS.SHARE.COPY}
+            </Popover.Content>
+        </CopyToClipboard>
+        ) : (
+        <Popover.Content className="copied-link">
+            {LABELS.RESPONSE.SHARE.COPY}
+        </Popover.Content>
+        )}
     </Popover>
   );
 

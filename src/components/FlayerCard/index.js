@@ -5,24 +5,24 @@ import LikeButton from "./Buttons/LikeButton";
 import ShareButton from "./Buttons/ShareButton";
 import "./style.scss";
 
-function Flayer({ src, openLightbox, FID, title, location }) {
+function Flayer({ ...flayer }) {
   const iconSize = "1.3em";
   return (
-    <div className="card-container" key={FID}>
+    <div className="card-container" key={flayer.FID}>
       <Card>
         <Card.Img
           variant="top"
-          src={src}
+          src={flayer.src}
           className="img-fluid"
-          alt={`Flayer #${FID}`}
-          onClick={(e) => openLightbox(FID)}
+          alt={`Flayer #${flayer.FID}`}
+          onClick={(e) => flayer.openLightbox(flayer.FID)}
         />
         <Card.Body>
-          <Card.Title>{title}</Card.Title>
-          <Card.Text>{location}</Card.Text>
+          <Card.Title onClick={(e) => flayer.openLightbox(flayer.FID)}>{flayer.title}</Card.Title>
+          <Card.Text>{flayer.location}</Card.Text>
           <div className="card-buttons">
             <LikeButton size={iconSize} />
-            <ShareButton size={iconSize} imgURL={src} />
+            <ShareButton size={iconSize} {...flayer}/>
             <OverlayTrigger
               placement="bottom"
               overlay={popover}
