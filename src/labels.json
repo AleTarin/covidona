@@ -5,17 +5,17 @@
         "WHATSAPP": "Enviar como mensaje por Whatsapp",
         "FACEBOOK": {
           "SHARE": "Compartir en Facebook",
-          "QUOTE": "\nCovidona es un sitio de flayers para donativos contra el COVID-19 en México."
+          "QUOTE": "\nCovidona es un sitio de flayers para donaciones contra el COVID-19 en México."
         },
         "TWITTER": {
           "SHARE": "Compartir en Twitter",
-          "TWEET": "\n\nCovidona es un sitio de flayers para donativos contra el COVID-19 en México."
+          "TWEET": "\n\nCovidona es un sitio de flayers para donaciones contra el COVID-19 en México."
         },
         "EMAIL": {
           "SHARE": "Enviar como correo electrónico",
           "SUBJECT": "Flayer de Covidona-mx",
-          "BODY1": "Te comparto el siguiente flayer.\n\n",
-          "BODY2": "\n\nCovidona es un sitio de flayers para donativos contra el COVID-19 en México."
+          "BODY1": "Te comparto el siguiente flayer de ",
+          "BODY2": "\n\nCovidona es un sitio de flayers para donaciones contra el COVID-19 en México."
         },
         "COPY": "Copiar liga URL"
       }
@@ -36,7 +36,8 @@
       }
     },
     "HOMEPAGE": {
-      "DESCRIPTION": "El fin de este sitio es concentrar la mayor cantidad de Flayers para donativos, facilitar su distribucion digital y fortalecer la lucha contra el COVID-19 en México. Eres es bienvenidx a aportar a la galería a travez del boton 'Contribuir Flayer'."
+      "HOMELOCATION": "https://covidona-mx.web.app",
+      "DESCRIPTION": "El fin de este sitio es concentrar la mayor cantidad de Flayers para donaciones, facilitar su distribucion digital y fortalecer la lucha contra el COVID-19 en México. Eres es bienvenidx a aportar a la galería a travez del boton 'Contribuir Flayer'."
     }
   }
 }

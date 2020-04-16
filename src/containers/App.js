@@ -13,7 +13,7 @@ function App() {
     <Router>
       <Switch>
         <Route path="/:FID?">
-          <AppContainer></AppContainer>
+          <AppContainer />
         </Route>
       </Switch>
     </Router>
