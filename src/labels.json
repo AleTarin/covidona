@@ -26,7 +26,7 @@
       }
     },
     "NAVBAR": {
-      "FOOTER": "Developed by Front-End-Pistols 2020.",
+      "FOOTER": "Developed by Front-End-Pistols - 2020",
       "COVIDONA": "COVIDONA - MX -",
       "SUBMIT": {
         "BUTTON": "Contribuir Flayer",
@@ -37,7 +37,7 @@
     },
     "HOMEPAGE": {
       "HOMELOCATION": "https://covidona-mx.web.app",
-      "DESCRIPTION": "El fin de este sitio es concentrar la mayor cantidad de Flayers para donaciones, facilitar su distribucion digital y fortalecer la lucha contra el COVID-19 en México. Eres es bienvenidx a aportar a la galería a travez del boton 'Contribuir Flayer'."
+      "DESCRIPTION": "El fin de este sitio es concentrar la mayor cantidad de Flayers para donaciones, facilitar su distribucion digital y fortalecer la lucha contra el COVID-19 en México. Eres bienvenidx a aportar a la galería a travez del boton 'Contribuir Flayer'."
     }
   }
 }
