@@ -30,27 +30,27 @@ function ShareButton({ iconSize, ...flayer }) {
         {/* TODO Simplify with a function */}
         <Popover.Content className="share-buttons">
         <WhatsappShareButton 
-          title={`${flayer.title} de ${flayer.location}`} 
-          url={`https://covidona-mx.web.app/${flayer.FID}`}
+          title={`${flayer.title} de ${flayer.location}\n`} 
+          url={`${LABELS.HOMEPAGE.HOMELOCATION}\n${LABELS.BUTTONS.SHARE.EMAIL.BODY2}\nFlayer: ${flayer.src}`}
           >
             <WhatsappIcon borderRadius="10" size="40" />
         </WhatsappShareButton>
         <FacebookShareButton 
-          quote={`${flayer.title} de ${flayer.location}${LABELS.BUTTONS.SHARE.FACEBOOK.QUOTE}`} 
-          url={`https://covidona-mx.web.app/${flayer.FID}`}
+          quote={`${flayer.title} de ${flayer.location}\n${LABELS.HOMEPAGE.HOMELOCATION}\n${LABELS.BUTTONS.SHARE.FACEBOOK.QUOTE}\n\nFlayer: `} 
+          url={`${flayer.src}`}
           >
             <FacebookIcon borderRadius="10" size="40" />
         </FacebookShareButton>
         <TwitterShareButton 
-          title={`${flayer.title} de ${flayer.location}`} 
-          url={`https://covidona-mx.web.app/${flayer.FID}`}
+          title={`De ${LABELS.HOMEPAGE.HOMELOCATION} ${flayer.title} de ${flayer.location}. Flayer:  `} 
+          url={`${flayer.src}`}
           >
             <TwitterIcon borderRadius="10" size="40" />
         </TwitterShareButton>
         <EmailShareButton 
           subject={LABELS.BUTTONS.SHARE.EMAIL.SUBJECT} 
-          body={`${LABELS.BUTTONS.SHARE.EMAIL.BODY1}${flayer.title} de ${flayer.location}`} 
-          url={`\nhttps://covidona-mx.web.app/${flayer.FID} ${LABELS.BUTTONS.SHARE.EMAIL.BODY2}`}
+          body={`${LABELS.BUTTONS.SHARE.EMAIL.BODY1}${LABELS.HOMEPAGE.HOMELOCATION}\n${flayer.title} de ${flayer.location}\n`} 
+          url={`Flayer:\n${flayer.src} ${LABELS.BUTTONS.SHARE.EMAIL.BODY2}`}
           separator=" " 
           >
             <EmailIcon borderRadius="10" size="40" />
@@ -58,7 +58,7 @@ function ShareButton({ iconSize, ...flayer }) {
         </Popover.Content>
         {/* TODO simplify with a function */}
         {!copyURL ? (
-        <CopyToClipboard text={`https://covidona-mx.web.app/${flayer.FID}`} onCopy={copyHandle}>
+        <CopyToClipboard text={`${LABELS.HOMEPAGE.HOMELOCATION}/${flayer.FID}`} onCopy={copyHandle}>
             <Popover.Content className="copy-link">
             {LABELS.BUTTONS.SHARE.COPY}
             </Popover.Content>
