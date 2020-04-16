@@ -31,26 +31,26 @@ function ShareButton({ iconSize, ...flayer }) {
         <Popover.Content className="share-buttons">
         <WhatsappShareButton 
           title={`${flayer.title} de ${flayer.location}`} 
-          url={`http://covidona-mx.web.app/${flayer.FID}`}
+          url={`https://covidona-mx.web.app/${flayer.FID}`}
           >
             <WhatsappIcon borderRadius="10" size="40" />
         </WhatsappShareButton>
         <FacebookShareButton 
           quote={`${flayer.title} de ${flayer.location}${LABELS.BUTTONS.SHARE.FACEBOOK.QUOTE}`} 
-          url={`http://covidona-mx.web.app/${flayer.FID}`}
+          url={`https://covidona-mx.web.app/${flayer.FID}`}
           >
             <FacebookIcon borderRadius="10" size="40" />
         </FacebookShareButton>
         <TwitterShareButton 
           title={`${flayer.title} de ${flayer.location}`} 
-          url={`http://covidona-mx.web.app/${flayer.FID}`}
+          url={`https://covidona-mx.web.app/${flayer.FID}`}
           >
             <TwitterIcon borderRadius="10" size="40" />
         </TwitterShareButton>
         <EmailShareButton 
           subject={LABELS.BUTTONS.SHARE.EMAIL.SUBJECT} 
           body={`${LABELS.BUTTONS.SHARE.EMAIL.BODY1}${flayer.title} de ${flayer.location}`} 
-          url={`\nhttp://covidona-mx.web.app/${flayer.FID} ${LABELS.BUTTONS.SHARE.EMAIL.BODY2}`}
+          url={`\nhttps://covidona-mx.web.app/${flayer.FID} ${LABELS.BUTTONS.SHARE.EMAIL.BODY2}`}
           separator=" " 
           >
             <EmailIcon borderRadius="10" size="40" />
@@ -58,7 +58,7 @@ function ShareButton({ iconSize, ...flayer }) {
         </Popover.Content>
         {/* TODO simplify with a function */}
         {!copyURL ? (
-        <CopyToClipboard text={`http://covidona-mx.web.app/${flayer.FID}`} onCopy={copyHandle}>
+        <CopyToClipboard text={`https://covidona-mx.web.app/${flayer.FID}`} onCopy={copyHandle}>
             <Popover.Content className="copy-link">
             {LABELS.BUTTONS.SHARE.COPY}
             </Popover.Content>
